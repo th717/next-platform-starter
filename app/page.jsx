@@ -3,6 +3,7 @@ import { Card } from './../components/card';
 import { ContextAlert } from './../components/context-alert';
 import { Markdown } from './../components/markdown';
 import { RandomQuote } from './../components/random-quote';
+import { Hero } from './../components/sections';
 import { getNetlifyContext } from './../utils';
 
 const contextExplainer = `
@@ -25,26 +26,39 @@ const ctx = getNetlifyContext();
 
 export default function Page() {
     return (
-        <div className="flex flex-col gap-12 sm:gap-16">
-            <section>
-                <ContextAlert className="mb-6" />
-                <h1 className="mb-4">Netlify Platform Starter - Next.js!!!</h1>
-                <p className="mb-6 text-lg">Get started with Next.js and Netlify in seconds.</p>
-                <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
-                    Read the Docs
-                </Link>
-            </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-                <Markdown content={postDynamicContentExplainer} />
-            </section>
+        <div className="flex flex-col">
+            {/* Hero Section - Full Width */}
+            <Hero 
+                title="Discover Amazing Products"
+                subtitle="Find the perfect items for your lifestyle and elevate your everyday experience"
+                buttonText="Shop All"
+                buttonLink="/shop"
+            />
+            
+            {/* Main Content - With Container */}
+            <div className="w-full max-w-5xl mx-auto px-6 sm:px-12 py-16">
+                <div className="flex flex-col gap-12 sm:gap-16">
+                    <section>
+                        <ContextAlert className="mb-6" />
+                        <h1 className="mb-4">Netlify Platform Starter - Next.js!!!</h1>
+                        <p className="mb-6 text-lg">Get started with Next.js and Netlify in seconds.</p>
+                        <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
+                            Read the Docs
+                        </Link>
+                    </section>
+                    {!!ctx && (
+                        <section className="flex flex-col gap-4">
+                            <Markdown content={contextExplainer} />
+                            <RuntimeContextCard />
+                        </section>
+                    )}
+                    <section className="flex flex-col gap-4">
+                        <Markdown content={preDynamicContentExplainer} />
+                        <RandomQuote />
+                        <Markdown content={postDynamicContentExplainer} />
+                    </section>
+                </div>
+            </div>
         </div>
     );
 }
