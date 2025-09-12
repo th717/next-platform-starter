@@ -49,7 +49,7 @@ const Hero = ({
   const heroSlides = slides.length > 0 ? slides : defaultSlides;
 
   return (
-    <section className={`relative w-full h-[calc(100vh-120px)] min-h-[calc(100vh-120px)] overflow-hidden bg-gray-50 md:h-[calc(100vh-100px)] md:min-h-[calc(100vh-100px)] sm:h-[calc(100vh-90px)] sm:min-h-[calc(100vh-90px)] ${className}`}>
+    <section className={`relative w-full h-[calc(100vh-80px)] min-h-[calc(100vh-80px)] overflow-hidden bg-gray-50 sm:h-[calc(100vh-100px)] sm:min-h-[calc(100vh-100px)] md:h-[calc(100vh-120px)] md:min-h-[calc(100vh-120px)] ${className}`}>
       <div className="relative w-full h-full">
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Background Image */}
@@ -68,17 +68,17 @@ const Hero = ({
           </div>
 
           {/* Content */}
-          <div className="relative z-20 w-full max-w-6xl px-8 text-center">
+          <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight">
                 Discover Amazing Products
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed max-w-xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto px-4 sm:px-0">
                 Find the perfect items for your lifestyle and elevate your everyday experience
               </p>
               <Link
                 href="/shop"
-                className="inline-block px-8 py-4 bg-transparent text-white border-2 border-white text-lg font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden group"
+                className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-transparent text-white border-2 border-white text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden group"
               >
                 <span className="relative z-10">Shop All</span>
                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

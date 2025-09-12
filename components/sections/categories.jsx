@@ -34,25 +34,25 @@ const Categories = ({
   const categoryItems = categories.length > 0 ? categories : defaultCategories;
 
   return (
-    <section className={`w-full bg-white py-16 px-6 sm:px-12 ${className}`}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <section className={`w-full bg-white py-12 sm:py-16 lg:py-20 ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             {title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
             {description}
           </p>
           <Link 
             href={buttonLink} 
-            className="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
+            className="inline-block px-6 py-3 sm:px-8 sm:py-3 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 text-sm sm:text-base"
           >
             {buttonText}
           </Link>
         </div>
         
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {categoryItems.map((category) => (
             <div key={category.id} className="text-center group cursor-pointer">
               <div className="relative mb-6 overflow-hidden rounded-lg">
