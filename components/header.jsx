@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const navItems = [
-    { linkText: 'Shop', href: '/shop' },
-    { linkText: 'Collections', href: '/collections' },
-    { linkText: 'Resources', href: '/resources' },
+    { linkText: 'Landing', href: '/landing' },
+    { linkText: 'Guide', href: '/guide' },
     { linkText: 'Blog', href: '/blog' },
-    { linkText: 'About', href: '/about' }
+    { linkText: 'Pricing', href: '/pricing' },
+    { linkText: 'Pillar', href: '/pillar' }
 ];
 
 export function Header() {
