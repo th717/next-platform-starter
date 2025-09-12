@@ -71,15 +71,16 @@ const Hero = ({
           {/* Content */}
           <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-2xl mx-auto">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)'}}>
                 Discover Amazing Products
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto px-4 sm:px-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto px-4 sm:px-0 drop-shadow-xl" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.5)'}}>
                 Find the perfect items for your lifestyle and elevate your everyday experience
               </p>
               <Link
                 href="/shop"
-                className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-transparent text-white border-2 border-white text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden group"
+                className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-transparent text-white border-2 border-white text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden group drop-shadow-lg"
+                style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.6)'}}
               >
                 <span className="relative z-10">Shop All</span>
                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
