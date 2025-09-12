@@ -34,7 +34,7 @@ const Products = ({
   const productItems = products.length > 0 ? products : defaultProducts;
 
   return (
-    <section className={`w-full bg-white py-12 sm:py-16 lg:py-20 ${className}`}>
+    <section className={`w-full bg-white py-8 sm:py-12 lg:py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">

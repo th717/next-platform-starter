@@ -35,7 +35,7 @@ const Features = ({
   const featureItems = features.length > 0 ? features : defaultFeatures;
 
   return (
-    <section className={`w-full bg-gray-100 py-12 sm:py-16 lg:py-20 relative ${className}`}>
+    <section className={`w-full bg-gray-100 py-8 sm:py-12 lg:py-16 relative ${className}`}>
       {/* Purple top border */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
