@@ -56,7 +56,7 @@ const Hero = ({
           <div className="absolute inset-0 z-10">
             <ReactPlayer
               key="hero-video"
-              src="https://www.youtube.com/watch?v=cjR3AxN_f50"
+              src="https://www.youtube.com/watch?v=Fxmki30wSLg"
               playing
               loop
               muted
