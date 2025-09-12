@@ -108,6 +108,10 @@
     --tracking-button: 0.04em;
     
     /* Canonical breakpoint tokens */
+    --mq-xs: 20rem; /* 320px */
+    --mq-xs-px: 320px;
+    --mq-xs-raw: 320;
+    
     --mq-xsm: 30rem; /* 480px */
     --mq-xsm-px: 480px;
     --mq-xsm-raw: 480;
@@ -978,6 +982,26 @@
     }
     
     /* Canonical breakpoint utilities */
+    .xs-only {
+        display: block;
+    }
+    
+    @media (min-width: var(--mq-xs)) {
+        .xs-only {
+            display: none;
+        }
+    }
+    
+    .xs-up {
+        display: none;
+    }
+    
+    @media (min-width: var(--mq-xs)) {
+        .xs-up {
+            display: block;
+        }
+    }
+    
     .xsm-only {
         display: block;
     }
