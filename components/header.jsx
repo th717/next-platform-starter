@@ -254,9 +254,9 @@ export function Header() {
                                             onMouseLeave={() => setActiveDropdown(null)}
                                         >
                                             <button
-                                                className={`text-sm transition-colors duration-300 hover:text-gray-600 flex items-center ${
+                                                className={`text-sm transition-colors duration-300 hover:text-gray-600 flex items-center py-2 px-2 ${
                                                     item.isActive 
-                                                        ? 'font-bold text-gray-900 border-b-2 border-blue-500 pb-1' 
+                                                        ? 'font-bold text-gray-900' 
                                                         : 'text-gray-700'
                                                 }`}
                                             >
@@ -431,9 +431,9 @@ export function Header() {
                                     ) : (
                                     <Link 
                                         href={item.href} 
-                                            className={`text-sm transition-colors duration-300 hover:text-gray-600 ${
+                                            className={`text-sm transition-colors duration-300 hover:text-gray-600 py-2 px-2 ${
                                                 item.isActive 
-                                                    ? 'font-bold text-gray-900 border-b-2 border-blue-500 pb-1' 
+                                                    ? 'font-bold text-gray-900 border-b-2  pb-1' 
                                                     : 'text-gray-700'
                                             }`}
                                     >
@@ -511,7 +511,7 @@ export function Header() {
                                         {item.hasDropdown ? (
                                             <div>
                                                 <button
-                                                    className={`block text-sm py-2 transition-colors duration-300 hover:text-gray-600 flex items-center justify-between w-full ${
+                                                    className={`block text-sm py-3 px-3 transition-colors duration-300 hover:text-gray-600 flex items-center justify-between w-full ${
                                                         item.isActive 
                                                             ? 'font-bold text-gray-900' 
                                                             : 'text-gray-700'
@@ -727,9 +727,9 @@ export function Header() {
                                         ) : (
                                         <Link 
                                             href={item.href} 
-                                                className={`block text-sm py-2 transition-colors duration-300 hover:text-gray-600 ${
+                                                className={`block text-sm py-3 px-3 transition-colors duration-300 hover:text-gray-600 ${
                                                     item.isActive 
-                                                        ? 'font-bold text-gray-900 border-b-2 border-blue-500' 
+                                                        ? 'font-bold text-gray-900 border-b-2 ' 
                                                         : 'text-gray-700'
                                                 }`}
                                             onClick={() => setIsMobileMenuOpen(false)}
