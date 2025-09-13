@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Guide', href: '/guide' },
-    { linkText: 'Blog', href: '/blog' },
-    { linkText: 'Pricing', href: '/pricing' },
-    { linkText: 'Pillar', href: '/pillar' }
+    { linkText: 'Shop', href: '/shop', isActive: true },
+    { linkText: 'Collections', href: '/collections', isActive: false },
+    { linkText: 'Resources', href: '/resources', isActive: false },
+    { linkText: 'Blog', href: '/blog', isActive: false },
+    { linkText: 'About', href: '/about', isActive: false }
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
                     
                     {/* Right side - Support */}
                     <div className="flex-shrink-0">
-                        <Link href="/support" className="underline hover:no-underline text-xs sm:text-sm">
+                        <Link href="/support" className="text-xs sm:text-sm hover:text-gray-300 transition-colors duration-300">
                             Support
                         </Link>
                     </div>
@@ -40,11 +40,11 @@ export function Header() {
             </div>
 
             {/* Main Navigation Bar */}
-            <nav className="bg-white text-black border-b border-gray-200">
+            <nav className="bg-white text-black shadow-lg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
                     <div className="flex items-center">
                         {/* Logo */}
-                        <Link href="/" className="text-xl sm:text-2xl font-bold underline flex-shrink-0">
+                        <Link href="/" className="text-xl sm:text-2xl font-bold text-gray-900 flex-shrink-0">
                             Logo
                         </Link>
 
@@ -54,7 +54,11 @@ export function Header() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className="underline hover:no-underline text-sm"
+                                        className={`text-sm transition-colors duration-300 hover:text-gray-600 ${
+                                            item.isActive 
+                                                ? 'font-bold text-gray-900 border-b-2 border-blue-500 pb-1' 
+                                                : 'text-gray-700'
+                                        }`}
                                     >
                                         {item.linkText}
                                     </Link>
@@ -90,7 +94,7 @@ export function Header() {
                             {/* Login - Desktop - Aligned with Support */}
                             <Link 
                                 href="/login" 
-                                className="hidden sm:block text-xs sm:text-sm underline hover:no-underline flex-shrink-0"
+                                className="hidden sm:block text-xs sm:text-sm text-gray-700 hover:text-gray-600 transition-colors duration-300 flex-shrink-0"
                             >
                                 Login
                             </Link>
@@ -120,7 +124,11 @@ export function Header() {
                                     <li key={index}>
                                         <Link 
                                             href={item.href} 
-                                            className="block underline hover:no-underline text-sm py-2"
+                                            className={`block text-sm py-2 transition-colors duration-300 hover:text-gray-600 ${
+                                                item.isActive 
+                                                    ? 'font-bold text-gray-900 border-b-2 border-blue-500' 
+                                                    : 'text-gray-700'
+                                            }`}
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             {item.linkText}
@@ -130,7 +138,7 @@ export function Header() {
                                 <li className="pt-2 border-t border-gray-200">
                                     <Link 
                                         href="/login" 
-                                        className="block underline hover:no-underline text-sm py-2"
+                                        className="block text-gray-700 hover:text-gray-600 transition-colors duration-300 text-sm py-2"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         Login
